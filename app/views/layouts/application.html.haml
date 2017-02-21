@@ -7,6 +7,37 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p.notice= notice
-    %p.alert= alert
+    %header
+      .header_inner
+        = link_to image_tag('logo.png'), root_path, id: "logo"
+        %nav
+          - if user_signed_in?
+            = link_to "New Note", new_note_path
+            = link_to "Sign Out", destroy_user_session_path, method: :delete
+          - else
+            = link_to "Sign In", new_user_session_path
+    - if flash[:notice]
+      .alert.success
+        %span.closebtn ×
+        = flash[:notice]
+    - elsif flash.now[:alert]
+      .alert.danger
+        %span.closebtn ×
+        = flash.now[:alert]
+    - elsif flash[:alert]
+      .alert.warning
+        %span.closebtn ×
+        = flash[:alert]
     = yield
+
+:javascript
+  var close = document.getElementsByClassName("closebtn");
+  var i;
+
+  for (i = 0; i < close.length; i++) {
+      close[i].onclick = function(){
+          var div = this.parentElement;
+          div.style.opacity = "0";
+          setTimeout(function(){ div.style.display = "none"; }, 600);
+      }
+  }

@@ -1,1 +1,31 @@
-%h1 Welcome
+#banner
+  .banner_content
+    %h1 Noteworthy
+    %p Make a note of it.
+    %button= link_to "Sign Up", new_user_registration_path
+
+#testimonial
+  .wrapper
+    %p.quote "Join millions of people who rely on Noteworthy to get more things done every day."
+
+#callouts
+  .callout_inner
+    .wrapper
+      .callout
+        %h2 Brainstorm
+        %p A note can be anything you want it to be: a project reminder or personal to-do item.
+      .callout
+        %h2 Relax
+        %p Never worry about where you saved something because it’s in Noteworthy forever.
+      .callout
+        %h2 Share
+        %p Share big ideas by collaborating seamlessly with co-workers in a group notebook.
+
+#bottom_cta
+  .wrapper
+    %h2 Remember Everything
+    %p Capture your ideas from anywhere.
+    %button= link_to "Get Started", new_user_registration_path
+
+%footer
+  %p &copy; Noteworthy
