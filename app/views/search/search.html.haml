@@ -1,0 +1,11 @@
+%h1 Notes Search
+= form_for search_path, method: :get do |f|
+  %p
+    = f.label "Search for"
+    = text_field_tag :q, params[:q]
+    = submit_tag "Go", name: nil
+%ul
+  - @notes.each do |note|
+    %li
+      %h3
+        = link_to note.title, controller: "notes", action: "show", id: note._id
