@@ -8,4 +8,12 @@
   - @notes.each do |note|
     %li
       %h3
-        = link_to note.title, controller: "notes", action: "show", id: note._id
+        = link_to note.try(:highlight).try(:title) ? note.highlight.title[0].html_safe : note.title, |
+          controller: "notes",
+          action: "show",
+          id: note._id
+      - if note.try(:highlight).try(:content)
+        - note.highlight.content.each do |snippet|
+          %p
+            = snippet.html_safe
+            \...
