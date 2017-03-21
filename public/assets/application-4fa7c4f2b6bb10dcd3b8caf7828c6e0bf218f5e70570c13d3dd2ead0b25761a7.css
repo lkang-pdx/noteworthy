@@ -1,0 +1,352 @@
+/*
+
+ */
+@import url(normalize.css);
+/* line 11, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 16, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+body {
+  padding-top: 5.25rem;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* line 21, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 26, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.wrapper_with_padding {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3.5rem 0;
+}
+
+/* line 32, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 37, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 41, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+button, .button {
+  border: none;
+  outline: none;
+  background: #33CD99;
+  padding: 1rem 3.5rem;
+  border-radius: 2rem;
+}
+/* line 47, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+button a, .button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 53, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.button {
+  color: white;
+  margin: 2rem 0;
+}
+
+/* line 58, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+a {
+  color: #33CD99;
+  text-decoration: none;
+}
+/* line 61, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+a:hover {
+  color: #2B2E2E;
+}
+
+/* line 66, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+header {
+  background: #2B2E2E;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.75rem 0;
+}
+/* line 72, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+header .header_inner {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 75, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+header .header_inner #logo {
+  display: inline-block;
+  width: 10rem;
+  float: left;
+}
+/* line 80, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+header .header_inner nav {
+  float: right;
+}
+/* line 82, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+header .header_inner nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-left: 1rem;
+}
+/* line 88, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+header .header_inner nav a:hover {
+  color: #33CD99;
+}
+
+/* line 96, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+footer {
+  background: #2B2E2E;
+  width: 100%;
+  padding: 2rem 0;
+  color: #33CD99;
+  text-align: center;
+  font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 103, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+footer p {
+  margin: 0;
+  font-size: .9rem;
+}
+
+/* line 109, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid #C0C1C1;
+  border-radius: .4rem;
+}
+
+/* line 116, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+input[type="text"], input[type="email"], input[type="password"] {
+  height: 40px;
+}
+
+/* line 120, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+textarea {
+  min-height: 200px;
+}
+
+/* line 124, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 0px;
+}
+
+/* line 133, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.alert.success {
+  background-color: #33CD99;
+}
+
+/* line 134, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.alert.danger {
+  background-color: #ff0000;
+}
+
+/* line 135, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.alert.warning {
+  background-color: #FFA500;
+}
+
+/* line 137, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* line 148, /Users/lunakang/development/noteworthy/app/assets/stylesheets/global.scss */
+.closebtn:hover {
+  color: black;
+}
+
+/* line 2, /Users/lunakang/development/noteworthy/app/assets/stylesheets/notes.scss */
+#notes .note {
+  background: #2B2E2E;
+  width: 30%;
+  min-height: 150px;
+  margin: 1rem 1%;
+  padding: 1.5rem 2.5%;
+  float: left;
+  border-radius: .4rem;
+  position: relative;
+}
+/* line 11, /Users/lunakang/development/noteworthy/app/assets/stylesheets/notes.scss */
+#notes .note .title {
+  font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+}
+/* line 17, /Users/lunakang/development/noteworthy/app/assets/stylesheets/notes.scss */
+#notes .note .date {
+  position: absolute;
+  bottom: .25rem;
+  left: 8.5%;
+  color: #33CD99;
+  font-size: .85rem;
+}
+
+/* line 28, /Users/lunakang/development/noteworthy/app/assets/stylesheets/notes.scss */
+#note_show .title {
+  font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #E9E9E9;
+}
+/* line 35, /Users/lunakang/development/noteworthy/app/assets/stylesheets/notes.scss */
+#note_show p {
+  font-size: 1.375rem;
+  line-height: 1.75;
+}
+/* line 39, /Users/lunakang/development/noteworthy/app/assets/stylesheets/notes.scss */
+#note_show .buttons {
+  margin-top: 3rem;
+}
+/* line 41, /Users/lunakang/development/noteworthy/app/assets/stylesheets/notes.scss */
+#note_show .buttons a.button {
+  padding: .5rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: #33CD99;
+  border: 5px solid #E9E9E9;
+  font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+/* line 1, /Users/lunakang/development/noteworthy/app/assets/stylesheets/search.scss */
+em {
+  background: yellow;
+}
+
+/* line 1, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#banner {
+  background-image: url("/assets/welcome_banner_image-a19dcb53778dd24134362c3260df8f16c34f92d9928b2a19606bc14594be4acb.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+  min-height: 500px;
+  display: table;
+}
+/* line 9, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#banner .banner_content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 13, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#banner .banner_content h1 {
+  font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #33CD99;
+  font-size: 3.5rem;
+  margin: 0;
+}
+/* line 19, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#banner .banner_content p {
+  font-size: 1.5rem;
+  margin: 0 0 2 0;
+  color: white;
+}
+
+/* line 27, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#testimonial {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #343434;
+  padding: 3.5rem 0;
+}
+/* line 32, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#testimonial .quote {
+  margin: 0 0 .5rem 0;
+}
+
+/* line 37, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#callouts {
+  background-image: url("/assets/callout_background-ae1b3d9a26dc32c5eae4db9d9ec3ea23c3aca9cae7ae50664a432dc5b5fe80c5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+  min-height: 400px;
+  display: table;
+}
+/* line 45, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#callouts .callout_inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 49, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#callouts .callout {
+  text-align: center;
+  width: 33.3333%;
+  padding: 1.5rem 2.5%;
+  float: left;
+}
+/* line 54, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#callouts .callout i {
+  color: #33CD99;
+}
+/* line 57, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#callouts .callout h2 {
+  font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #33CD99;
+  margin-bottom: 0;
+}
+/* line 62, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#callouts .callout p {
+  color: white;
+}
+
+/* line 68, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#bottom_cta {
+  text-align: center;
+  padding: 7.5rem 0;
+}
+/* line 71, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#bottom_cta h2 {
+  font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #33CD99;
+  font-size: 3rem;
+  margin: 0;
+}
+/* line 77, /Users/lunakang/development/noteworthy/app/assets/stylesheets/welcome.scss */
+#bottom_cta p {
+  font-size: 1.25rem;
+  margin: 0 0 2 0;
+  color: #2B2E2E;
+}
