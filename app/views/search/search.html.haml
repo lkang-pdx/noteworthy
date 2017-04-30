@@ -1,19 +1,20 @@
-%h1 Notes Search
-= form_for search_path, method: :get do |f|
-  %p
-    = f.label "Search for"
-    = text_field_tag :q, params[:q]
-    = submit_tag "Go", name: nil
-%ul
-  - @notes.each do |note|
-    %li
-      %h3
-        = link_to note.try(:highlight).try(:title) ? note.highlight.title[0].html_safe : note.title, |
-          controller: "notes",
-          action: "show",
-          id: note._id
-      - if note.try(:highlight).try(:content)
-        - note.highlight.content.each do |snippet|
-          %p
-            = snippet.html_safe
-            \...
+.wrapper_with_padding
+  %h1 Search Notes
+  = form_for search_path, method: :get do |f|
+    %p
+      = text_field_tag :q, params[:q]
+      = f.button :Search, class: "button"
+
+  %ul
+    - @notes.each do |note|
+      %li
+        %h3
+          = link_to note.try(:highlight).try(:title) ? note.highlight.title[0].html_safe : note.title, |
+            controller: "notes",
+            action: "show",
+            id: note._id
+        - if note.try(:highlight).try(:content)
+          - note.highlight.content.each do |snippet|
+            %p
+              = snippet.html_safe
+              \...
